@@ -1,0 +1,120 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
+.personSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px; /* Adjust the padding as needed */
+    width: 100%;
+    gap: 20px; /* Add gap for spacing between elements */
+}
+  
+.colorModeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin to create space between image and text */
+}
+  
+.person {
+    max-width: 200px;
+}
+  
+.colorMode {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    width: 25px;
+}
+  
+.info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+  
+span {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+a {
+    margin: 0;
+}
+
+a img {
+    width: 50px; /* Set a proper width for the icons */
+}
+
+a {
+    width: fit-content;
+    align-self: center;
+}
+
+.button { 
+    background-color: var(--btn-color); 
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 20px;
+    width: 120px; 
+    height: 50px; 
+    font-size: 20px; 
+    font-weight: bold;  
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.05); 
+}
+
+.button:active { 
+    transform: translateY(2px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.colorModeContainer { 
+    position: relative;
+}
+
+.colorMode:hover { 
+    cursor: pointer;
+}
+
+.description {
+    max-width: 24ch;
+    align-self: center;
+}
+
+@media (min-width: 800px) {
+    .personSection {
+        flex-direction: row-reverse; 
+        justify-content: space-evenly; 
+        align-items: center;
+        gap: 50px; /* Add gap for spacing between elements on larger screens */
+    }
+
+    .person {
+        max-width: 350px;
+        width: 350px;
+    }
+
+    .info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1400px) {
+    .personSection .person {
+        max-width: 400px;
+        width: 400px;
+    }
+}
